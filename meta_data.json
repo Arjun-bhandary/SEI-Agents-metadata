@@ -1,0 +1,42 @@
+{
+  "citation_key": "weyssow2024exploring",
+  "authors": [
+    "Weyssow, Martin",
+    "Diro,",
+    "Zhou, Xin",
+    "Kim, Kisub",
+    "Lo, David"
+  ],
+  "title": "Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models",
+  "date": "2024-12-27",
+  "year": "2024",
+  "month": "12",
+  "day": "27",
+  "doi": "10.1145/nnnnnnn.nnnnnnn",
+  "eprint": "arXiv:2308.10462v3[cs.SE]",
+  "abstract": "Large language models (LLMs) demonstrate impressive capabilities to generate accurate code snippets given natural language intents in a zero-shot manner, i.e., without the need for specific fine-tuning. While prior studies have highlighted the advantages of fine-tuning LLMs, this process incurs high computational costs, making it impractical in resource-scarce environments, particularly for models with billions of parameters. To address these challenges, previous research explored in-context learning (ICL) and retrieval-augmented generation (RAG) as strategies to guide the LLM generative process with task-specific prompt examples. However, ICL and RAG introduce inconveniences, such as the need for designing contextually relevant prompts and the absence of learning task-specific parameters, thereby limiting downstream task performance. In this context, we foresee parameter-efficient fine-tuning (PEFT) as a promising approach to efficiently specialize LLMs to task-specific data while maintaining reasonable resource consumption. In this paper, we deliver a comprehensive study of PEFT techniques for LLMs in the context of automated code generation. Our comprehensive investigation of PEFT techniques for LLMs reveals their superiority and potential over ICL and RAG across a diverse set of LLMs and three representative Python code generation datasets: Conala, CodeAlpacaPy, and APPS. Furthermore, our study highlights the potential for tuning larger LLMs and significant reductions in memory usage by combining PEFT with quantization. Therefore, this study opens opportunities for broader applications of PEFT in software engineering scenarios.",
+  "high_level_overview": "This paper presents a comprehensive empirical study of parameter-efficient fine-tuning (PEFT) techniques for large language models (LLMs) in the context of automated code generation.  The authors compare PEFT techniques (LoRA, IA3, Prompt tuning, Prefix tuning, QLoRA) against in-context learning (ICL) and retrieval-augmented generation (RAG), evaluating their performance on three Python code generation datasets (Conala, CodeAlpacaPy, and APPS).  The study highlights the superiority of PEFT, especially LoRA and QLoRA, in terms of effectiveness and resource efficiency, enabling the fine-tuning of even very large LLMs with limited computational resources.",
+  "specialities": [
+    "Software engineering",
+    "Code generation",
+    "Large language models",
+    "Parameter-efficient fine-tuning"
+  ],
+  "distinguishing_features": [
+    "Comprehensive study of PEFT techniques for LLMs in code generation",
+    "Comparison of PEFT with ICL and RAG",
+    "Evaluation on three datasets with varying complexity",
+    "Demonstration of practicality under resource-constrained scenarios",
+    "Exploration of quantization with PEFT"
+  ],
+  "publisher": "",
+  "keywords": [
+    "CCS Concepts:",
+    "Software and its engineering → Software creation and management; Software development techniques code generation",
+    "large language models",
+    "parameter-efficient fine-tuning",
+    "quantization",
+    "empirical study 29.47"
+  ],
+  "bibtex_string": "@article{weyssow2024exploring,\n  title={Exploring Parameter-Efficient Fine-Tuning Techniques for Code Generation with Large Language Models},\n  author={Weyssow, Martin and Diro, and Zhou, Xin and Kim, Kisub and Lo, David},\n  journal={},\n  year={2024},\n  month={dec},\n  doi={10.1145/nnnnnnn.nnnnnnn},\n  eprint={arXiv:2308.10462v3[cs.SE]}\n}"
+}
