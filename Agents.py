@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import os
 import re
 import json
+import pandas as pd
 
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
@@ -151,3 +152,12 @@ class Paper:
         self.parse_grobid_output()
       self._summary = self._agent.generate_summary(self.head, self.body, self.tail)
     return self._summary
+
+
+    
+
+
+
+
+
+    
