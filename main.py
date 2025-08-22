@@ -8,6 +8,7 @@ import os
 import pandas as pd
 from Agents import Paper  # assume your code is in paper_parser.py
 from datasets import Dataset
+from Formula import formula
 app = FastAPI()
 
 key = os.getenv('GEMINI_API_KEY')
@@ -94,3 +95,26 @@ async def generate_summary_endpoint(
     os.remove(temp_path)
 
     return result
+
+form = formula()
+
+@app.post("/formula/metadata")
+async def get_metadata(user_input: str = Form(...), image: UploadFile = File(...)):
+  # save temp file
+  temp_path = f"temp_{image.filename}"
+  with open(temp_path, "wb") as buffer:
+    buffer.write(await image.read())
+  
+  result = form.extract_metadata(user_input, temp_path)
+  os.remove(temp_path)  # cleanup
+  return JSONResponse(content=result)
+
+@app.post("/formula/summary")
+async def get_summary(user_input: str = Form(...), image: UploadFile = File(...)):
+  temp_path = f"temp_{image.filename}"
+  with open(temp_path, "wb") as buffer:
+    buffer.write(await image.read())
+  
+  result = form.extract_summary(user_input, temp_path)
+  os.remove(temp_path)
+  return JSONResponse(content=result)
